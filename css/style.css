@@ -1,0 +1,208 @@
+:root {
+    /* New Color Theme */
+    --primary: #2dd4bf;      /* Teal */
+    --secondary: #6366f1;    /* Indigo */
+    --accent: #ff6b6b;       /* Coral */
+    --dark: #1e293b;         /* Deep Blue */
+    --light: #f8fafc;        /* Off White */
+}
+
+/* Typography */
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    color: var(--dark);
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+/* Navbar Enhancements */
+.nav-menu {
+    border: none;
+    background-color: transparent;
+    font-size: 1.8rem;
+    color: var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.nav-menu:hover {
+    transform: rotate(90deg);
+}
+
+.navbar-nav a {
+    color: var(--dark);
+    position: relative;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+}
+
+.navbar-nav a:hover {
+    color: var(--accent);
+}
+
+.navbar-nav a::after {
+    background: var(--accent);
+    height: 3px;
+    bottom: -5px;
+}
+
+/* Home Section */
+.home {
+    background: linear-gradient(160deg, var(--light) 0%, rgba(237, 244, 255, 0.8) 100%);
+    padding: 5rem 0;
+}
+
+.home h2 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: var(--dark);
+}
+
+.c-primary {
+    color: var(--primary);
+    font-weight: 700;
+    display: block;
+}
+
+/* Buttons */
+.c-btn {
+    background: var(--primary);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(45, 212, 191, 0.3);
+}
+
+.c-btn:hover {
+    background: var(--secondary);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+}
+
+/* Card Enhancements */
+.service-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+}
+
+.service-card:hover h4,
+.service-card:hover a {
+    color: white !important;
+}
+
+/* Progress Bars */
+.circular-progress {
+    background: conic-gradient(var(--primary) 3.6deg, #e2e8f0 0deg);
+}
+
+.progress-value {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+/* Portfolio Filters */
+#myBtnContainer button {
+    position: relative;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+#myBtnContainer button.active {
+    background: var(--primary);
+    color: white !important;
+}
+
+#myBtnContainer button:hover {
+    color: var(--primary) !important;
+}
+
+/* Testimonials */
+.testimonial-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+.testimonial i {
+    color: var(--primary);
+    font-size: 3rem;
+}
+
+/* Contact Section */
+.contact-form .form-control {
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.2);
+}
+
+/* Social Links */
+.social-links a {
+    width: 45px;
+    height: 45px;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* Back to Top Button */
+#btn-back-to-top {
+    background: var(--primary);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(45, 212, 191, 0.3);
+}
+
+/* Animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.home img {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Gradient Overlays */
+.section-header {
+    position: relative;
+}
+
+.section-header::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: var(--primary);
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
